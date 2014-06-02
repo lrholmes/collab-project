@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Worthington's Originals</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+	
+	<!-- Stylesheets -->
+	<link href='http://fonts.googleapis.com/css?family=Special+Elite|Playfair+Display|Lato:300,400,700' rel='stylesheet' type='text/css'>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/popup.css">
+	<link rel="stylesheet" href="css/style.css?version=1.3">
+
+	<!-- Scripts -->
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="js/instafeed.min.js"></script>
+	<script src="js/script.js?version=1.1"></script>
+</head>
+<body>
+	<header>
+		<div id="navigation">
+		<nav>
+			<ul>
+				<li><a href="videos.html">Episodes</a></li>
+				<li><a href="about.html">About Me</a></li>
+				<li><a href="media.html">Media</a></li>
+				<li><a href="contact.html">Enquiries</a></li>
+			</ul>
+		</nav>
+		</div>
+		<div id="title">
+			<h1><a href="home.html">Worthington's<br> Originals</a></h1>
+			<h2>The personal memoirs of Worthers James Worthington III</h2>
+		</div>
+	</header>
+	<div id="rip"></div>
+	<div class="container">
+		<section id="main">
+			<h3 class="pagetitle">Want to hire me?</h3>
+			<article>
+				<h3>Fill in this form</h3>
+				<form action="">
+					
+				</form>
+			</article>
+		</section>
+		<aside>
+			<div id="latestblogs"></div>
+			<div id="twitter">
+				<h3>Twitter</h3>
+				<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/Worthington007" data-widget-id="471310063361982464">Tweets by @Worthington007</a>
+			</div>
+			<div id="instafeed">
+				<h3>Instagram</h3>
+			</div>
+		</aside>
+	</div>
+	<div class="clear"></div>
+	<div id="rip" style="background-position: bottom center; background-image:url('images/ripflip.png')"></div>
+	<footer>
+		<div id="navigation">
+		<nav>
+			<ul>
+				<li><a href="videos.html">Episodes</a></li>
+				<li><a href="#">About Me</a></li>
+				<li><a href="#">Media</a></li>
+				<li><a href="#">Enquiries</a></li>
+			</ul>
+		</nav>
+		</div>
+		<div id="socialicons">
+			<a target="_blank" href="https://twitter.com/Worthington007"><i class="fa fa-twitter-square"></i></a>
+			<a target="_blank" href="http://instagram.com/worthington007"><i class="fa fa-instagram"></i></a>
+		</div>
+		<div id="copyright"> Copyright &copy; 2014 Pixel Perfect Productions. All Rights Reserved.</div>
+	</footer>
+</body>
+<script>
+	var feed = new Instafeed({
+			userId: 1352565616,
+	        get: 'user',
+	        limit: '3',
+	        accessToken: '1352565616.325924d.7887b2e330464d839d551094865d78cf',
+	        template: '<a href="{{link}}"><img src="{{image}}" /></a><p>{{caption}}</p>',
+	        resolution: 'standard_resolution',
+	        clientId: '325924d3873b4dd185f9362572b86e96'
+	    });
+	feed.run();
+</script>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</html>
