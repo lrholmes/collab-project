@@ -6,12 +6,8 @@ $(document).ready(function(){
 	titleHeight = $('#title').outerHeight(),
 	videoHeight = view.h-titleHeight;
 
-	function position() {
-		$('#videohead').css('height', videoHeight);
-	}
-
 	function init() {
-		position();
+
 	}
 
 	init();
