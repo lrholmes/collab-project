@@ -1,0 +1,129 @@
+@media only screen and (max-width : 1200px) {
+	.container {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width : 1000px) {
+	article {
+		padding: 0 5%;
+	}
+
+	aside {
+		width: 30%;
+	}
+
+	.pagetitle {
+		margin: 30px 5% 0;
+	}
+
+	header {
+		padding: 5%;
+	}
+
+	#splash {
+		width: 100%;
+	}
+
+	#splash div#info {
+		width: 95%;
+		padding: 15px;
+	}
+
+	#splash #description {
+		width: 100%;
+	}
+
+	.cover {
+		background-color: rgba(250,250,250,0.8);
+	}
+}
+
+@media only screen and (max-width : 800px) {
+	div#title {
+		width: 100%;
+	}
+
+	div#title h2 {
+		border-bottom: 1px dashed;
+		padding-bottom: 15px;
+		margin-bottom: 15px;
+		font-size: 3vw;
+	}
+
+	div#navigation {
+		width: 100%;
+		clear: both;
+		margin: 0;
+	}
+
+	nav {
+		text-align: center;
+
+	}
+	nav ul li {
+		display: inline;
+		padding: 10px 2%;
+	}
+
+	section#main {
+		width: 100%;
+	}
+
+	aside {
+		width: 100%;
+		margin: 5%;
+		float: left;
+	}
+
+	#twitter {
+		width: 45%;
+		float: left;
+		margin: 0 5% 0 0;
+	}
+
+	#instafeed {
+		width: 40%;
+		float: left;
+	}
+
+	footer #navigation nav ul li {
+		margin: 0;
+	}
+
+
+}
+
+@media only screen and (max-width : 550px) {
+	nav ul li {
+		display: block;
+	}
+	div#navigation {
+		margin: 0;
+	}
+	header {
+		height: 320px;
+	}
+
+	div#title h1 {
+		font-size: 12vw;
+	}
+
+	footer #navigation nav ul li {
+		display: block;
+	}
+
+	footer {
+		height: 350px;
+	}
+
+	#instafeed, #twitter {
+		display: none;
+	}
+
+	#about article p, #about article img {
+		width: 100%;
+		float: none;
+	}
+}
+
