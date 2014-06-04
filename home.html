@@ -10,33 +10,36 @@
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/popup.css">
 	<link rel="stylesheet" href="css/style.css?version=1.3">
+	<link rel="stylesheet" href="css/responsive.css">
 
 	<!-- Scripts -->
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 	<script src="js/instafeed.min.js"></script>
 	<script src="js/popup.js"></script>
 	<script src="js/script.js?version=1.1"></script>
 </head>
 <body>
 	<header>
+		<div id="title">
+			<h1><a href="home.html">Worthington's<br> Originals</a></h1>
+			<h2>The personal memoirs of Worthers James Worthington III</h2>
+		</div>
 		<div id="navigation">
 		<nav>
 			<ul>
 				<li><a href="videos.html">Episodes</a></li>
-				<li><a href="about.html">About Me</a></li>
-				<li><a href="media.html">Media</a></li>
+				<li><a href="about.html">About The Show</a></li>
+				<li><a href="photos.html">Photos</a></li>
 				<li><a href="contact.html">Enquiries</a></li>
 			</ul>
 		</nav>
-		</div>
-		<div id="title">
-			<h1><a href="home.html">Worthington's<br> Originals</a></h1>
-			<h2>The personal memoirs of Worthers James Worthington III</h2>
 		</div>
 	</header>
 	<div id="rip"></div>
 	<div class="container">
 		<section id="main">
+		<h3 class="pagetitle">Worthington's Personal Blog</h3>
 			<article>
 				<div class="posttitle"><h3>Ribbed for Her Pleasure</h3></div>
 				<div class="commentcount"><p><i class="fa fa-comment"></i> 1 Comment</p></div>
@@ -50,17 +53,20 @@
 			</article>
 			<article>
 				<div class="posttitle"><h3>He Likes Them Wet</h3></div>
-				<div class="commentcount"><p><i class="fa fa-comment"></i> 8 Comments</p></div>
+				<div class="commentcount"><a href="blog/he-likes-them-wet.html#comments"><p><i class="fa fa-comment"></i> 8 Comments</p></a></div>
 				<div class="entrycontent">
+				<p>Listen to my detective notes here:</p>
+				<audio controls><source src='audio/episode2.ogg' type='audio/ogg'></audio>
 					<p>I have outdone myself once more. Solving yet another unsolvable case with my inconceivable wits and talent. In fact I will be completely unsurprised if I read about this very case tomorrow in the papers. Front page obviously.
 					</p>
 					<p>
 					The whole thing started when I received a phone call early that morning, where I was informed by the police that there had been a murder. A horrible and tragic murder that they needed my help with. So of course once Grieves had come to pick me up I headed straight there. After all, you can’t waste time when there’s a murderer on the loose.</p>
 					<div class="continue">
-						<a href="#">Continue Reading <i style="font-size:70%" class="fa fa-arrow-right"></i></a>
+						<a href="blog/he-likes-them-wet.html">Continue Reading <i style="font-size:70%" class="fa fa-arrow-right"></i></a>
 					</div>
 				</div>
 			</article>
+
 		</section>
 		<aside>
 			<div id="latestblogs"></div>
@@ -80,8 +86,8 @@
 		<nav>
 			<ul>
 				<li><a href="videos.html">Episodes</a></li>
-				<li><a href="about.html">About Me</a></li>
-				<li><a href="media.html">Media</a></li>
+				<li><a href="about.html">About The Show</a></li>
+				<li><a href="photos.html">Photos</a></li>
 				<li><a href="contact.html">Enquiries</a></li>
 			</ul>
 		</nav>
@@ -116,17 +122,14 @@
 		function popup() {
 			$.magnificPopup.open({
 			  items: {
-			    src: "<div class='white-popup'><h3>Breaking News</h3><p class=\"date\">" + getTime() + "</p><p>There\'s been a murder! I got straight on the case and have just finished up recording a press release, listen here:</p><audio controls><source src='horse.ogg' type='audio/ogg'>Your browser does not support the audio element.</audio></div>",
+			    src: "<div class='white-popup'><h3>Breaking News</h3><p class=\"date\">" + getTime() + "</p><p>There\'s been a murder! I got straight on the case and have just finished up recording a press release, listen here:</p><audio controls><source src='audio/conference.ogg' type='audio/ogg'>Your browser does not support the audio element.</audio></div>",
 			    type: 'inline'
 			  }
 			});
-			document.cookie = 'opened=true; expires=Sat, 12 Jun 2014 20:47:11 UTC; path=/';
 		}
-		var x = document.cookie;
-		console.log(x);
-		if (x == "") {
-			getTime();
-			setTimeout(popup, 5000);
-		} 
+		   if ($.cookie('test_status') != '2') {
+			    setTimeout(popup, 5000);
+		    $.cookie('test_status', '2', { expires: 60}); }
+		    console.log()
 	</script>
 </html>
